@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "name": "nodejs_lesson",
+  "description": "Progate nodejs web app program",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xmaruwo/nodejs_lesson.git"
+  },
+  "author": "xmaruwo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xmaruwo/nodejs_lesson/issues"
+  },
+  "homepage": "https://github.com/xmaruwo/nodejs_lesson#readme"
+}
