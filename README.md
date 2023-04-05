@@ -2,6 +2,6 @@
 Progate nodejs web app program
 
 ```
-$ node -v 
+$ node -v
 $ v18.15.0
 ```
