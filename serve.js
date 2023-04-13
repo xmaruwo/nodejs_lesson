@@ -6,6 +6,9 @@ const port = 3000;
 //app.set('views', './views')
 app.set('view engine', 'ejs');
 
+// CSSおよび画像ファイル格納場所設定
+app.use(express.static('public'));
+
 app.get('/', (req, res) => {
   res.render('index.ejs');
   //  res.sendFile(`${__dirname}/views/hello.html`)
