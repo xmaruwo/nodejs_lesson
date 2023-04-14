@@ -10,8 +10,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-  res.render('index.ejs');
-  //  res.sendFile(`${__dirname}/views/hello.html`)
+  res.send('Hello World!');
   console.log("/ へアクセスがありました")
 })
 
@@ -24,6 +23,12 @@ app.get('/top', (req, res) => {
   // トップ画面を表示
   res.render('top.ejs');
   console.log("/top へアクセスがありました");
+});
+
+app.get('/index', (req, res) => {
+  // 一覧画面を表示
+  res.render('index.ejs');
+  console.log("/index へアクセスがありました");
 });
 
 app.listen(port, () => {
