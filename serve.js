@@ -1,6 +1,14 @@
 const express = require('express');
+const mysql = require('mysql2');
+
 const app = express();
 const port = 3000;
+
+const connection = mysql.createConnection({
+  host: '127.0.0.1',
+  user: 'root',
+  database: 'nodejs_lesson'
+});
 
 // テンプレートエンジンの指定
 //app.set('views', './views')
@@ -26,8 +34,16 @@ app.get('/', (req, res) => {
 });
 
 app.get('/index', (req, res) => {
+  connection.query(
+    'SELECT * FROM items',
+    (error, results) => {
+      console.log(error);
+      res.render('index.ejs', {items: results});
+    }
+  );
+
   // 一覧画面を表示
-  res.render('index.ejs');
+  // res.render('index.ejs');
   console.log("/index へアクセスがありました");
 });
 
