@@ -47,6 +47,11 @@ app.get('/index', (req, res) => {
   console.log("/index へアクセスがありました");
 });
 
+app.get('/new', (req, res) => {
+  // 新規作成画面を表示
+  res.render('new.ejs');
+});
+
 app.listen(port, () => {
   console.log(`listening at http://localhost:${port}`)
 });
