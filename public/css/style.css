@@ -42,6 +42,10 @@
     font-weight: 600;
   }
 
+  input {
+    font-family: inherit;
+    font-size: 100%;
+  }
 
   /* top ================================ */
   .top-wrapper {
@@ -206,8 +210,9 @@
     height: 72px;
     border: 1px solid #f0f4f9;
     border-top: none;
-    line-height: 74px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .table-body .id-column {
@@ -220,6 +225,7 @@
     font-weight: 500;
     color: #8491a5;
   }
+
   .item-data {
     display: flex;
   }
