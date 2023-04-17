@@ -39,30 +39,33 @@ app.get('/index', (req, res) => {
   connection.query(
     'SELECT * FROM items',
     (error, results) => {
-      console.log(error);
+      if(error) {
+        console.log(error);
+      }
+      // 一覧画面を表示
       res.render('index.ejs', {items: results});
+      console.log("/index へアクセスがありました");
     }
   );
-
-  // 一覧画面を表示
-  // res.render('index.ejs');
-  console.log("/index へアクセスがありました");
 });
 
 app.get('/new', (req, res) => {
   // 新規作成画面を表示
   res.render('new.ejs');
+  console.log("/new へアクセスがありました");
 });
 
 app.post('/create', (req, res) => {
   console.log("/create へアクセスがありました");
-  console.log(req.body.itemName);
+
   // データ追加
   connection.query(
     'INSERT INTO items (name) VALUES (?)',
     [req.body.itemName],
     (error, results) => {
-      console.log(error);
+      if(error) {
+        console.log(error);
+      }
       // 一覧画面へリダイレクト
       res.redirect('/index');
     }
@@ -71,11 +74,15 @@ app.post('/create', (req, res) => {
 
 app.post('/delete/:id', (req, res) => {
   console.log('/delete へアクセスがありました');
+
   // データ削除
   connection.query(
     'DELETE FROM items WHERE id = ?',
     [req.params.id],
     (error, results) => {
+      if(error) {
+        console.log(error);
+      }
       // 一覧画面へリダイレクト
       res.redirect('/index');
     }
@@ -84,11 +91,15 @@ app.post('/delete/:id', (req, res) => {
 
 app.get('/edit/:id', (req, res) => {
   console.log('/edit へアクセスしました');
+
   // 編集データ取得
   connection.query(
     'SELECT * FROM items WHERE id = ?',
     [req.params.id],
     (error, results) => {
+      if(error) {
+        console.log(error);
+      }
       // データ編集画面表示
       res.render('edit.ejs', {item: results[0]});
     }
@@ -97,11 +108,15 @@ app.get('/edit/:id', (req, res) => {
 
 app.post('/update/:id', (req, res) => {
   console.log('/update へアクセスしました');
+
   // データ更新
   connection.query(
     'UPDATE items SET name = ? WHERE id = ?',
     [req.body.itemName, req.params.id],
     (error, results) => {
+      if(error) {
+        console.log(error);
+      }
       // 一覧画面へリダイレクト
       res.redirect('/index');
     }
