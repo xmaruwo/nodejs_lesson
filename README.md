@@ -1,6 +1,9 @@
 # nodejs_lesson
 Progate nodejs web app program
 
+<a href="https://trackgit.com">
+<img src="https://us-central1-trackgit-analytics.cloudfunctions.net/token/ping/lgm0wx35ouwwns9wkhbl" alt="trackgit-views" />
+</a>
 ```
 $ node -v
 $ v18.15.0
