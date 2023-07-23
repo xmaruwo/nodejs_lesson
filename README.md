@@ -1,6 +1,19 @@
 # nodejs_lesson
 Progate nodejs web app program
 
+<a href="https://trackgit.com">
+<img src="https://us-central1-trackgit-analytics.cloudfunctions.net/token/ping/lgm0wx35ouwwns9wkhbl" alt="trackgit-views" />
+</a>
+
+***
+## Demo
+
+
+https://github.com/xmaruwo/nodejs_lesson/assets/94747777/6228bd0c-45dc-4ba5-8529-50b1b8925d31
+
+
+
+## node version
 ```
 $ node -v
 $ v18.15.0
@@ -27,6 +40,3 @@ CREATE DATABASES nodejs_lesson;
 ```
 
 
-<a href="https://trackgit.com">
-<img src="https://us-central1-trackgit-analytics.cloudfunctions.net/token/ping/lgm0wx35ouwwns9wkhbl" alt="trackgit-views" />
-</a>
